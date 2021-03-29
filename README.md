@@ -3,12 +3,14 @@
 
 ## Overview of Project: 
 
-The purpose of this project was to refactor a previously written code to run faster and more efficiently while maintaining the same functionality. Additionally, the original code was written to see if the stock with the ticker "DQ" was a good investment with a likelyhood of positive returns in the future. The given code was written in VBA for an Excel spreadsheet containing green energy stock daily trading information. The original code's purpose was to loop through the data, find the total daily volume for each of the twelve green energy stocks for the chosen year, calculate the return for each stock for the chosen year, and print the information in a new worksheet titled "All Stocks Analysis".  A timer and pop-up message box containing the analysis run time was included in each version of the code to compare analysis run time results. An additional VBA macro was used in the original code to add conditional formatting to the created table, highlighting stocks with a positive return in green, negative return in red, and converting the return value to show as a rounded percent.  The refactored code included this formatting in it's subroutine analysis. The given dataset had two worksheets with green energy stock trading information, one for the year 2017 and one for the year 2018.  Each sheet had 3,013 rows of data with information on the ticker of the green energy stock, the date traded, the open, close, high, low, adjusted close, and volume traded for that day. The Excel workbook with the completed analysis and given data is attached above under VBS_Challenge.xlsm
+The purpose of this project was to refactor a previously written code to run faster and more efficiently while maintaining the same functionality. Additionally, the original code was written to see if the stock with the ticker "DQ" was a good investment with a likelyhood of positive returns in the future. The given code was written in VBA for an Excel spreadsheet containing green energy stock daily trading information. The original code's purpose was to loop through the data, find the total daily volume for each of the twelve green energy stocks for the chosen year, calculate the return for each stock for the chosen year, and print the information in a new worksheet titled "All Stocks Analysis".  A timer and pop-up message box containing the analysis run time was included in each version of the code to compare analysis run time results. An additional VBA macro was used in the original code to add conditional formatting to the created table, highlighting stocks with a positive return in green, negative return in red, and converting the return value to show as a rounded percent.  The refactored code included this formatting in it's subroutine analysis. The given dataset had two worksheets with green energy stock trading information, one for the year 2017 and one for the year 2018.  Each sheet had 3,013 rows of data with information on the ticker of the green energy stock, the date traded, the open, close, high, low, adjusted close, and volume traded for that day. The Excel workbook with the completed analysis, screen shots of run times, and refactored and original code are attached above.
 
 
 ## Results: 
 
+
 #### Original and Refactored code compared
+
 
 The beginning section of the refactored and original code to analyze the stock data are similar.  They both create variables for the start and end time of the message box timer, create an input box to enter the year for analysis, create an array of stock tickers, use a rowcount formula to determine the number of rows to loop over, and activate the input year's worksheet. The refactored code also includes the creation of a tickerIndex and three arrays: tickerVolumes(12), tickerStartingprices(12), and tickerEndingprices(12). The tickerIndex is set to zero and used as an input in the three arrays later in the code.   The refactored code differs from the original primarily through the creation of a tickerIndex and arrays for the data that will be pulled from the worksheet year.  The similarities and differences can be seen below: 
 
@@ -51,6 +53,9 @@ In contrast, ten of the twelve analyzed stocks had negative percents of return f
 
 ### Execution times of the original script and the refactored script
 
+The refactored code ran about three times faster than the original code. Screenshots of the timer results are shown below:
+
+
 The original execution times for the 2017 and 2018 worksheets rounded to the thousandths place were 0.619 seconds and 0.610 seconds respectively.
 
 
@@ -60,7 +65,7 @@ The original execution times for the 2017 and 2018 worksheets rounded to the tho
 ![original_2018_runtime](https://user-images.githubusercontent.com/78699521/112771413-9af31400-8fe0-11eb-96d7-a60a1eb129b9.png)
 
 
-The refactored code execution times for the 2017 and 2018 worksheets rounded to the thousandths place  were 0.222 seconds and 0.169 seconds respectively.
+The refactored code execution times for the 2017 and 2018 worksheets rounded to the thousandths place  were 0.223 seconds and 0.169 seconds respectively.
 
 
 ![VBA_Challenge_2017](https://user-images.githubusercontent.com/78699521/112771425-b2ca9800-8fe0-11eb-9e6c-ed024a396fe1.png)
